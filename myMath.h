@@ -19,3 +19,11 @@ int Ackermann(int m, int n){
 		Ackermann(m - 1, Ackermann(m, n - 1));
 	}
 }
+
+int Fibonacci(int x){
+	if(x == 0)
+		return 0;
+	else if (x == 1)
+		return 1;
+	else return Fibonacci(x-1) + Fibonacci(x-2);
+}
