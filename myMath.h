@@ -1,13 +1,3 @@
-//function for sterling numbers of the second kind
-int Sterling(int n, int r){
-	if(r == 1)
-		return 1;
-	else if(r == n)
-		return 1;
-	else	
-		return(Sterling(n - 1, r - 1) + (r * Sterling(n - 1, r)));
-}
-
 int Ackermann(int m, int n){
 	if(m == 0){
 		return n + 1;
@@ -26,4 +16,14 @@ int Fibonacci(int x){
 	else if (x == 1)
 		return 1;
 	else return Fibonacci(x-1) + Fibonacci(x-2);
+}
+
+//function for sterling numbers of the second kind
+int Sterling(int n, int r){
+	if(r == 1)
+		return 1;
+	else if(r == n)
+		return 1;
+	else	
+		return(Sterling(n - 1, r - 1) + (r * Sterling(n - 1, r)));
 }
