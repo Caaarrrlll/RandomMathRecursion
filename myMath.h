@@ -27,3 +27,23 @@ int Sterling(int n, int r){
 	else	
 		return(Sterling(n - 1, r - 1) + (r * Sterling(n - 1, r)));
 }
+
+//Tower of hanoi
+int ToH(int n){
+	if(n < 2){
+		return 1;
+	}
+	else{
+		return (2*ToH(n - 1) + 1);
+	}
+}
+
+//Tower of hanoi with adjacency requirement
+int ToHA(int n){
+	if(n < 2){
+		return 2;
+	}
+	else{
+		return (3*ToHA(n - 1) + 2);
+	}
+}
